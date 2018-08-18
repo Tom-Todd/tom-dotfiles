@@ -10,5 +10,7 @@
         ~/.vimrc:       vimrc
 	~/.muttrc:	muttrc
 	~/.gitconfig	gitconfig
+	~/.local/share/konsole/DefaultProfile.profile: DefaultProfile.profile
+	~/.local/share/konsole/Solarized.colorscheme: Solarized.colorscheme
 - shell:
         - git submodule update --init --recursive
