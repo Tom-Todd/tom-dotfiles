@@ -12,4 +12,4 @@ alias g='git'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias sysen='sudo systemctl enable'
 alias sysdi='sudo systemctl disable'
-
+alias mpd='mpd ~/.config/mpd/mpd.conf'
