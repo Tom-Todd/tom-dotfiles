@@ -9,7 +9,8 @@
         ~/.xprofile:    xprofile
         ~/.vimrc:       vimrc
 	~/.muttrc:	muttrc
-	~/.gitconfig	gitconfig
+	~/.gitconfig:	gitconfig
+	~/.ncmpcpp/config: ncmpcpp.conf
 	~/.local/share/konsole/DefaultProfile.profile: DefaultProfile.profile
 	~/.local/share/konsole/Solarized.colorscheme: Solarized.colorscheme
 - shell:
