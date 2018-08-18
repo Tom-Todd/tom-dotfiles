@@ -8,5 +8,6 @@
         ~/.restartMouseDriver.sh:       restartMouseDriver.sh
         ~/.xprofile:    xprofile
         ~/.vimrc:       vimrc
+	~/.muttrc:	muttrc
 - shell:
         - git submodule update --init --recursive
