@@ -15,7 +15,7 @@ setopt appendhistory autocd extendedglob
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 autoload -Uz promptinit
 promptinit
-prompt paradox
+prompt powerlevel9k
 source ~/.zsh_aliases
 neofetch --colors 1 1 1 1 1 6 --memory_display bar --ascii ~/.config/neofetch/ascii
-rm -f ~/.local/share/applications/wine-*
+#rm -f ~/.local/share/applications/wine-*

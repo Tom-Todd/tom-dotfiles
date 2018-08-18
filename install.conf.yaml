@@ -1,0 +1,12 @@
+- clean: ['~', '~/.config']
+
+- link:
+        ~/.zsh_aliases:  zsh_aliases
+        ~/.zshrc:       zshrc
+        ~/.yakuakerc:   yakuakerc
+        ~/.config/plasma-workspace/env/yakuakestart.sh:         yakuakestart.sh
+        ~/.restartMouseDriver.sh:       restartMouseDriver.sh
+        ~/.xprofile:    xprofile
+        ~/.vimrc:       vimrc
+- shell:
+        - git submodule update --init --recursive

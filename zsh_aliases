@@ -1,6 +1,7 @@
-alias c='clear; neofetch --colors 1 1 1 1 1 6 --memory_display bar --ascii ~/.config/neofetch/ascii'
+alias c='clear; neofetch --colors 1 1 1 1 1 6  bar --ascii ~/.config/neofetch/ascii'
 alias ca='clear'
 alias q='exit'
+alias resTouch='sudo zsh ~/.restartMouseDriver.sh'
 alias shutdown='sudo systemctl poweroff'
 alias ls='ls --color=auto'
 alias pacupg='yay -Syu'
