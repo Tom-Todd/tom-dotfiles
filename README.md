@@ -1,7 +1,7 @@
 # Dotfiles
 
 My Dotfiles for arch linux. 
-Installer created using dotbot: https://github.com/anishathalye/dotbot
+Installer created using dotbot: (https://github.com/anishathalye/dotbot "Dotbot") 
 
 Includes setup for ibus/anthy for Japanese input.
 Contains some workarounds for issues with the touchpad on my ASUS FX504GM Laptop.
