@@ -9,5 +9,6 @@
         ~/.xprofile:    xprofile
         ~/.vimrc:       vimrc
 	~/.muttrc:	muttrc
+	~/.gitconfig	gitconfig
 - shell:
         - git submodule update --init --recursive

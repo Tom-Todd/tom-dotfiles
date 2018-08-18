@@ -1,0 +1,15 @@
+[user]
+	email = thomas.m.a.todd@gmail.com
+	name = Tom Todd
+[core]
+	editor = vim
+
+[sendemail]
+	from = Tom Todd <thomas.m.a.todd@gmail.com>
+	smtpserver = smtp.gmail.com
+	smtpuser = thomas.m.a.todd@gmail.com
+	smtpencryption = tls
+	smtppass =  
+	chainreplyto = false
+	smtpserverport = 587
+	sslverify = false
