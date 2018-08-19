@@ -8,11 +8,11 @@
         ~/.restartMouseDriver.sh:       restartMouseDriver.sh
         ~/.xprofile:    xprofile
         ~/.vimrc:       vimrc
-	~/.muttrc:	muttrc
-	~/.gitconfig:	gitconfig
-	~/.config/mpd/mpd.conf: mpd.conf
-	~/.ncmpcpp/config: ncmpcpp.conf
-	~/.local/share/konsole/DefaultProfile.profile: DefaultProfile.profile
-	~/.local/share/konsole/Solarized.colorscheme: Solarized.colorscheme
+        ~/.muttrc:      muttrc
+        ~/.gitconfig:   gitconfig
+        ~/.config/mpd/mpd.conf: mpd.conf
+        ~/.ncmpcpp/config: ncmpcpp.conf
+        ~/.local/share/konsole/DefaultProfile.profile: DefaultProfile.profile
+        ~/.local/share/konsole/Solarized.colorscheme: Solarized.colorscheme
 - shell:
         - git submodule update --init --recursive
