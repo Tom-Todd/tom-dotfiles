@@ -11,3 +11,4 @@ Installer created using dotbot: [Dotbot](https://github.com/anishathalye/dotbot)
 + Mutt configuration
 + Git configuration, with send-email set up
 + Japanese Input: ibus/anthy
++ Installer script for software packages
