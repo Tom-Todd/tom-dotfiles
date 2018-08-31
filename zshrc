@@ -2,7 +2,8 @@
 
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle :compinstall filename '/home/tom/.zshrc'
-
+# Import colorscheme from 'wal'
+cat ~/.cache/wal/sequences
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
