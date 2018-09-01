@@ -1,0 +1,9 @@
+#!/bin/bash
+VOLUMESTRING=$(amixer -c 0 get Capture | grep "Front Left:")
+ARRAY=()
+for word in $VOLUMESTRING
+do
+	ARRAY+=($word)
+done
+echo "${ARRAY[4]}" | tr -d '[]'
+

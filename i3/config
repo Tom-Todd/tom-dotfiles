@@ -29,7 +29,7 @@ set $ws2  "2:"
 set $ws3  "3:"
 set $ws4  "4:"
 set $ws5  "5:"
-set $ws6  "6:6"
+set $ws6  "6:"
 set $ws7  "7:7"
 set $ws8  "8:8"
 set $ws9  "9:9"
@@ -39,13 +39,6 @@ set $default_gaps_inner 10
 set $default_gaps_outer 0
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
-
-#workspace $ws1 gaps inner 0
-#workspace $ws1 gaps outer 0
-#workspace $ws9 gaps inner 0
-#workspace $ws9 gaps outer 0
-#workspace $ws10 gaps inner 0
-#workspace $ws10 gaps outer 0
 
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
@@ -68,7 +61,6 @@ bindsym $mod+Return exec $editor
 #bindsym $mod+Shift+Return exec --no-startup-id exec $HOME/scripts/fullscreen_wrap.sh $editor --name __scratchpad
 
 bindsym $mod+q kill
-
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 bindsym $mod+Left focus left
@@ -116,7 +108,7 @@ bindsym $mod+Shift+plus scratchpad show
 
 bindsym $mod+Shift+s sticky toggle
 # put YouTube into fullscreen and execute this for media mode
-bindsym $mod+y fullscreen disable; floating enable; resize set 600 400; sticky enable; move window to position 1940 54
+bindsym $mod+y fullscreen disable; floating enable; resize set 800 490; sticky enable; move window to position 1940 54
 
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -130,22 +122,18 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% && pkill -SIGRTMIN+10 i3blocks #increase sound volume && exec pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% && pkill -SIGRTMIN+10 i3blocks #decrease sound volume && exec pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-#bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
-#bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
-#bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-#bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
-
-#bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/scripts/backlight.sh -dec 1
-#bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/scripts/backlight.sh -inc 1
-
-bindsym XF86MonBrightnessUp exec xbacklight -inc 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 1 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec ~/.brightnessUp # increase screen brightness
+bindsym XF86MonBrightnessDown exec ~/.brightnessDown # decrease screen brightness
 
 bindsym $mod+Shift+w exec --no-startup-id $editor --name "__nmtui" -e "nmtui-connect"
+
+bindsym $mod+plus exec ~/.micUp
+bindsym $mod+minus exec ~/.micDown
+
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -322,7 +310,7 @@ bar {
     colors {
         statusline         $white
         background         $darkcyan
-        separator          $transparent
+        separator          $black
 
 #                          BORDER       BACKGROUND   TEXT
         focused_workspace  $white       $white       $black
