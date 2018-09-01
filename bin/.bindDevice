@@ -1,0 +1,40 @@
+#!/bin/bash
+
+set -euo pipefail
+IFS=$'\n\t'
+
+
+print-usage() {
+    echo "Usage: $0 <device>"
+}
+
+
+if [[ "$EUID" -ne 0 ]]; then
+    echo "Need to be root." && exit 1
+fi
+
+if [[ "$#" -ne 1 ]]; then
+    print-usage && exit 1
+fi
+
+DEVICE=$1
+
+if [[ ! -d /sys/bus/pci/devices/$DEVICE ]]; then
+    echo "$DEVICE not found in /sys/bus/pci/devices" && exit 1
+fi
+
+if [[ -d /sys/bus/pci/devices/$DEVICE/driver ]]; then
+    DRIVER=$(basename $(readlink -f /sys/bus/pci/devices/$DEVICE/driver))
+
+    if [[ $DRIVER == "vfio-pci" ]]; then
+        echo "$DEVICE is already bound to vfio-pci" && exit 0
+    fi
+
+    echo "Unbinding $DEVICE from $DRIVER"
+
+    echo "$DEVICE" > /sys/bus/pci/devices/$DEVICE/driver/unbind
+fi
+
+echo "Binding $DEVICE to vfio-pci"
+
+echo "$(cat /sys/bus/pci/devices/$DEVICE/vendor) $(cat /sys/bus/pci/devices/$DEVICE/device)" > /sys/bus/pci/drivers/vfio-pci/new_id || echo "Binding $DEVICE to vfio-pci failed"

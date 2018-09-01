@@ -14,5 +14,9 @@
         ~/.ncmpcpp/config: ncmpcpp.conf
         ~/.local/share/konsole/DefaultProfile.profile: DefaultProfile.profile
         ~/.local/share/konsole/Solarized.colorscheme: Solarized.colorscheme
+        ~/.xinitrc: bin/xinitrc
+        ~/.xinitrc-i3: bin/xinitrc-i3
+        ~/.change_wallpaper: bin/change_wallpaper
+        ~/.bindDevice: bin/bindDevice
 - shell:
         - git submodule update --init --recursive
