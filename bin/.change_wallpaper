@@ -1,3 +1,0 @@
-#!/bin/sh
-wal -i /mnt/drive2/Desktop\ Backgrounds -n && feh --bg-fill "$(< "${HOME}/.cache/wal/wal")" &
-
