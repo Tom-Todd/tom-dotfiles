@@ -1,0 +1,8 @@
+OUTPUTS=$(xrandr --listmonitors)
+#echo $OUTPUTS
+ARRAY=()
+for word in $OUTPUTS
+do
+    ARRAY+=($word)
+done
+echo "${ARRAY[5]}"

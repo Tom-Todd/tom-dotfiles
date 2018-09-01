@@ -1,0 +1,11 @@
+#!/bin/bash
+DIV=$(xrandr --verbose | grep -m 1 -i brightness | cut -f2 -d ' '| bc)
+DIV=$(echo "$DIV+(0.11)" | bc)
+PERC=$(./.getBrightness)
+PERC=$(echo $PERC "/1" | bc )
+NAME=$(/home/tom/.getMonitors)
+if [  $PERC -le 91 ]
+then
+	xrandr --output $NAME --brightness $DIV
+	pkill -SIGRTMIN+12 i3blocks
+fi
