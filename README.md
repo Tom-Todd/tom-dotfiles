@@ -5,6 +5,7 @@ Installer created using dotbot: [Dotbot](https://github.com/anishathalye/dotbot)
 
 **Included:**
 + Workaround for touchpad issues with ASUS FX504GM Laptop
++ i3 config, with gaps
 + Yakuake profile and colour scheme
 + Yakuake startup script (location configured for kde): split terminal with sensors, top and mutt running
 + Mpd and ncmpcpp configuration
