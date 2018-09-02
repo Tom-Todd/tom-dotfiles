@@ -9,7 +9,7 @@
 	smtpserver = smtp.gmail.com
 	smtpuser = thomas.m.a.todd@gmail.com
 	smtpencryption = tls
-	smtppass =  
+	smtppass =
 	chainreplyto = false
 	smtpserverport = 587
 	sslverify = false
